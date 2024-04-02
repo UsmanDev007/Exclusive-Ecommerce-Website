@@ -1,0 +1,15 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   }
+.Mobile{
+    display: none;
+}
+
+@media screen and (max-width:1000px) {
+    #links-hide{
+        display: none;
+    }
+}
+

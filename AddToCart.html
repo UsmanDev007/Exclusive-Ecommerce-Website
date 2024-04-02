@@ -1,0 +1,218 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SavyCal-Add To Cart</title>
+    <link rel="icon" href="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" type="image/icon type">
+    <link rel="stylesheet" href="Add.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="bg-black text-white " >
+        <div class="text-center xl:space-x-48 p-2 ">
+          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!   
+          <span  class="underline ... font-semibold ">ShopNow</span>
+          <select id="language" class="bg-black text-white">
+              <option selected>English</option>
+              <option value="UR">Urdu</option>
+              <option value="FR">French</option>
+              <option value="TU">Turkish</option>
+            </select>
+        </div> 
+  </div> 
+     <!-- navbar -->
+
+     <!-- Hamburger -->
+     <div class="grid grid-cols-3 gap-4 mt-5" >
+      <div class="lg:hidden" id="Hamburger">
+          <button id="mobile-menu-button" class=" hover:text-black-900 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      <!-- Logo -->
+      <div>
+          <img src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48" class="mr-5">
+      </div>
+        <!-- links -->
+      <div class="hidden xl:flex justify-center space-x-10 mt-2">
+          <a href="HomePage.html" class="text-black-900  hover:underline">Home</a>
+          <a href="Contact.html" class="text-black-900 hover:underline">Contact</a>
+          <a href="About.html" class="text-black-900 hover:underline">About</a>
+          <a href="index.html" class="text-black-900 hover:underline">SignUp</a>
+
+      </div>
+        <!-- Search Shop Buy -->
+      <div class="relative pl-10" id="links-hide">
+          <!-- search -->
+            <input type="text" name="" id="" placeholder="looking for?"
+            class="p-2 "
+            >
+            <img src="/images/search_icon.png" alt="" class="absolute top-3 left-52">
+            <img src="/images/like.png" alt="" class="absolute top-3 left-64" >
+            <img src="/images/Cart1.png" alt="" class="absolute top-2 left-72">
+            
+          <!-- search -->
+          
+      </div>
+    </div>
+     <!-- Mobile Menu -->
+     <div class="Mobile fixed text-white bg-gray-700">
+      <a href="HomePage.html" class="text-black-900 hover:underline">Home</a>
+      <a href="Contact.html" class="text-black-900 hover:underline">Contact</a>
+      <a href="About.html" class="text-black-900 hover:underline">About</a>
+      <a href="index.html" class="text-black-900 hover:underline">SignUp</a>
+      <div class="relative">
+          <!-- search -->
+            <input type="text" name="" id="" placeholder="looking for?"
+            class="p-2"
+            >
+            <img src="/images/search_icon.png" alt="" class="absolute top-3 left-40">
+            <img src="/images/like.png" alt="" class="absolute top-3 left-48" >
+            <img src="/images/Cart1.png" alt="" class="absolute top-2 left-56">
+            
+          <!-- search -->
+      </div>
+     </div>
+
+
+<!--  -->
+<div class="cart_Heading  mt-10 flex flex-col-4 justify-between md:mx-32">
+  <div>
+    <p class="font-semibold text-base leading-6">Product</p>
+  </div>
+  <div>
+    <p class="font-semibold text-base leading-6">Price</p>
+  </div>
+  
+  <div>
+    <p class="font-semibold text-base leading-6">Quantity</p>
+  </div>
+  
+  <div>
+    <p class="font-semibold text-base leading-6">SubTotal</p>
+  </div>
+  
+</div>
+<!--  -->
+     <div class="cart_list">
+      
+     </div>
+
+     <div class="mt-3 md:mt-10">
+      <a href="HomePage.html"><button class="bg-white text-black hover:bg-red-500 hover:text-white hover:border-gray-50 text-base leading-6 py-3 px-8  border-2 border-gray-300 mt-5 md:ml-10">Return To Shop</button></a>
+
+      <button class="clear md:float-end  bg-white text-black hover:bg-red-500 hover:text-white hover:border-gray-50 text-base leading-6 py-3 px-8  border-2 border-gray-300 mt-5 sm:float-left  md:mr-10">Clear all</button>
+    </div>
+
+     <div class="flex justify-between flex-wrap-reverse"> 
+    <!-- child -->
+    <div class="flex flex-wrap gap-2 mt-10 ml-10">
+      <div>
+      <input type="text" id="first_name" class="bg-gray-50 border border-gray-500 text-gray-900 text-sm rounded-sm block  p-2.5 px-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-500 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Coupon Code" />
+    </div>
+    <div>
+      <button type="submit" class="text-white bg-red-500  font-medium rounded-sm text-sm  px-3.5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Apply Coupon</button>
+    </div>
+      
+    </div>
+
+    <div class="border border-black  sm: w-56 md:w-72 p-4 space-y-2 mr-20 mt-5">
+      <p class="font-medium text-xl leading-7">Cart Total</p>
+      <div class="flex justify-between">
+        <p class="font-medium text-lg leading-6" >Subtotal</p>
+        <p class="font-medium text-lg leading-6" id="grand">0</p>
+      </div>
+      <hr class="border border-gray-300">
+      <div class="flex justify-between">
+        <p class="font-medium text-lg leading-6">Shipping</p>
+        <p class="font-medium text-lg leading-6">Free</p>
+      </div>
+      <hr class="border border-gray-300">
+      <div class="flex justify-between">
+        <p class="font-medium text-lg leading-6">Total</p>
+        <p class="font-medium text-lg leading-6"id="final-price">0</p>
+      </div>
+      <div class="flex justify-center">
+        <a href="CheckOut.html">
+          <button type="submit" class="text-white bg-red-500  font-medium rounded-sm text-sm  px-4 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Procees to checkout</button>
+        </a>
+      </div>
+    </div>
+    <!-- child -->
+  </div>
+  <!-- footer -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-20 bg-black text-white">
+    <!-- Your content goes here -->
+    <div class="p-5 relative w-4/5 m-auto space-y-5 ">
+      <p class="font-bold text-2xl leading-6">Exclusive</p>
+      <p class="font-medium text-xl leading-7 hover:underline cursor-pointer">Subscribe</p>
+      <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Get 10% off your first order</p>
+      <input
+      type="email"
+      id="email"
+      name="email"
+      class=" bg-black  mt-1 p-2 border border-gray-300 rounded-sm "
+      placeholder="Enter your email"
+      />
+      <img src="/images/icon-send.png" alt="" id="send-icon" class="text-white">
+
+    </div>
+
+
+    <!-- Your content goes here -->
+    <div class="p-5 space-y-5">
+      <p class="font-medium text-xl leading-7">Support</p>
+      <p class="font-normal text-base leading-6 hover:underline cursor-pointer">111 Bijoy sarani, Dhaka</p>
+      <p class="font-normal text-base leading-6 hover:underline cursor-pointer">DH 1515, Bangladesh.</p>
+      <p class="font-normal text-base leading-6 hover:underline cursor-pointer">exclusive@gmail.com</p>
+      <p class="font-normal text-base leading-6 hover:underline cursor-pointer">+88015-88888-9999</p>
+    </div>
+    <!-- Your content goes here -->
+    <div class="p-5 space-y-5">
+      <p class="font-medium text-xl leading-7">Account</p>
+      <p class="font-normal text-base leading-6 hover:underline cursor-pointer">My Account</p>
+      <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Login / Register</p>
+      <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Cart</p>
+      <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Wishlist</p>
+      <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Shop</p>
+    </div>
+    <!-- Your content goes here -->
+    <div class="p-5 space-y-5">
+      <p class="font-medium text-xl leading-7">Quick Link</p>
+      <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Privacy Policy</p>
+      <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Terms Of Use</p>
+      <p class="font-normal text-base leading-6 hover:underline cursor-pointer">FAQ</p>
+      <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Contact</p>
+    </div>
+    <!-- Your content goes here -->
+    <div class="p-5 space-y-5">
+      <p class="font-medium text-xl leading-7">Download App</p>
+      <p class="font-medium text-base leading-5">Save $3 with App New User Only</p>
+      <!-- playstore and appstore -->
+
+      <div class="grid grid-rows-3 grid-flow-col">
+        <div class="row-span-3 ... cursor-pointer"><img src="/images/Qrcode 1.png" alt=""></div>
+        <div class="col-span-2 ... cursor-pointer"><img src="/images/google_play.png" alt=""></div>
+        <div class="col-span-2 ... cursor-pointer"><img src="/images/download-appstore.png" alt=""></div>
+      </div>
+      <!-- playstore and appstore -->
+       <!-- Social links -->
+       <div class="flex justify-content   space-x-8" id="social">
+        <img src="/images/fb.png" alt=""  class="cursor-pointer">
+        <img src="/images/tweet.png" alt="" class="cursor-pointer">
+        <img src="/images/icon-instagram.png" alt="" class="cursor-pointer">
+        <img src="/images/Icon-Linkedin.png" alt="" class="cursor-pointer">
+       </div>
+       <!-- Social links -->
+
+    </div>
+  </div>
+  <!-- Copyright -->
+   <div class="text-center bg-black">
+      <p style="color: rgba(160, 163, 189, 1);">&copy Copyright Rimel 2022. All right reserved</p>
+   </div>
+    <script src="AddToCart.js"></script>
+</body>
+</html>

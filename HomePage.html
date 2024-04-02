@@ -1,0 +1,378 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SavyCal-Home Page</title>
+    <link rel="icon" href="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" type="image/icon type">
+    <link rel="stylesheet" href="HomePageStyle.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="bg-black text-white " >
+          <div class="text-center xl:space-x-48 p-2 ">
+            Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!   
+            <span  class="underline ... font-semibold ">ShopNow</span>
+            <select id="language" class="bg-black text-white">
+                <option selected>English</option>
+                <option value="UR">Urdu</option>
+                <option value="FR">French</option>
+                <option value="TU">Turkish</option>
+              </select>
+          </div> 
+    </div> 
+       <!-- navbar -->
+
+       <!-- Hamburger -->
+       <div class="grid grid-cols-3 gap-4 mt-5" >
+        <div class="lg:hidden" id="Hamburger">
+            <button id="mobile-menu-button" class=" hover:text-black-900 focus:outline-none">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+            </button>
+          </div>
+        <!-- Logo -->
+        <div>
+            <img src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48" class="mr-5">
+        </div>
+          <!-- links -->
+        <div class="hidden lg:flex justify-center space-x-10 mt-2">
+            <a href="HomePage.html" class="text-black-900  hover:underline">Home</a>
+            <a href="Contact.html" class="text-black-900 hover:underline">Contact</a>
+            <a href="About.html" class="text-black-900 hover:underline">About</a>
+            <a href="index.html" class="text-black-900 hover:underline">SignUp</a>
+
+        </div>
+          <!-- Search Shop Buy -->
+        <div class="relative pl-10" id="links-hide">
+            <!-- search -->
+              <input type="text" name="" id="" placeholder="looking for?"
+              class="p-2 "
+              >
+              <img src="/images/search_icon.png" alt="" class="absolute top-3 left-52">
+              <img src="/images/like.png" alt="" class="absolute top-3 left-64" >
+         <a href="AddToCart.html"><img src="/images/Cart1.png" alt="" class="absolute top-2 left-72"></a>
+              
+            <!-- search -->
+            
+        </div>
+      </div>
+       <!-- Mobile Menu -->
+       <div class="Mobile fixed text-white bg-gray-700 bg-opacity-75">
+        <a href="HomePage.html" class="text-black-900 hover:underline">Home</a>
+        <a href="Contact.html" class="text-black-900 hover:underline">Contact</a>
+        <a href="About.html" class="text-black-900 hover:underline">About</a>
+        <a href="index.html" class="text-black-900 hover:underline">SignUp</a>
+        <div class="relative">
+            <!-- search -->
+              <input type="text" name="" id="" placeholder="looking for?"
+              class="p-2"
+              >
+              <img src="/images/search_icon.png" alt="" class="absolute top-3 left-40">
+              <img src="/images/like.png" alt="" class="absolute top-3 left-48" >
+      <a href="AddToCart.html"><img src="/images/Cart1.png" alt="" class="absolute top-2 left-56">
+      </a>
+            <!-- search -->
+        </div>
+       </div>
+
+       <!-- Women Fashion MenFashion -->
+       <div class="flex flex-wrap-reverse px-4 sm:px-8 md:px-16 lg:px-20 xl:px-40 justify-between mt-10">
+        <div class="space-y-4 cursor-pointer">
+            <p class="font-normal text-base leading-6 hover:underline">Woman’s Fashion</p>
+            <p class="font-normal text-base leading-6 hover:underline">Men’s Fashion</p>
+            <p class="font-normal text-base leading-6 hover:underline">Electronics</p>
+            <p class="font-normal text-base leading-6 hover:underline">Home & Lifestyle</p>
+            <p class="font-normal text-base leading-6 hover:underline">Medicine</p>
+            <p class="font-normal text-base leading-6 hover:underline">Sports & Outdoor</p>
+            <p class="font-normal text-base leading-6 hover:underline">Baby’s & Toys</p>
+            <p class="font-normal text-base leading-6 hover:underline">Groceries & Pets</p>
+            <p class="font-normal text-base leading-6 hover:underline">Health & Beauty</p>
+        </div>
+        <div class="mt-4 sm:mt-0">
+            <img src="/images/Frame 560.png" alt="">
+        </div>
+    </div>
+
+    <!-- Today -->
+      <div class="flex items-center gap-2 ml-5">
+        <img src="/images/Rectangle 17.png" alt="">
+        <span class="text-red-500 font-medium text-base">Today's</span>
+      </div>
+
+      <!-- -->
+      <div class="xl:grid grid-cols-3 md:grid grid-cols-2 sm:grid grid-cols-1">
+      <!-- Flash Sales -->
+      <div class="ml-4 mt-2 ">
+        <p class="font-semibold text-4xl leading-10">Flash Sales</p>
+      </div>
+      <!-- Time Remaining -->
+         <div id="timer">
+            <span class="font-medium flex gap-7 ml-1">
+              <p>Days</p>
+              <p>Hours</p>
+              <p>Minutes</p>
+              <p>Seconds</p>
+            </span>
+            <div class="font-bold text-4xl leading-7 flex gap-6">
+              <p id="days">03</p>
+              <p id="hours">23</p>
+              <p id="minutes">19</p>
+              <p id="seconds">56</p>
+            </div>
+         </div>
+        </div>
+        
+        <!-- Parent -->
+          <div class="container-card w-full grid sm:grid-cols-2 ml-5 mt-5 gap-8
+          md:grid-cols-2 ml-5 mt-5 lg:grid-cols-3 ml-5 mt-5 xl:grid-cols-4 ml-5 mt-5
+          ">
+        </div>
+      
+      
+    <!-- Button -->
+    <div class="flex justify-center ... mt-10">
+  <button class="bg-red-500 text-white font-medium text-base leading-6 w-44 h-10 rounded-sm" >View All Products</button>
+    </div> 
+   <!-- Button -->
+   
+   <!-- Catoories -->
+   <div class="flex items-center gap-2 ml-5">
+    <img src="/images/Rectangle 17.png" alt="">
+    <span class="text-red-500 font-medium text-base">Categories</span>
+  </div>
+  <div class="ml-4 mt-2">
+    <p class="font-semibold text-4xl leading-10">Browse By Category</p>
+  </div>
+  
+    <div class="mt-5 grid grid-cols-6 space-x-7" id="Category1">
+   <div class="cursor-pointer p-5 border border-2 rounded-sm flex flex-col items-center max-w-40 ml-5  hover:bg-red-500">
+     <img src="/images/Category-CellPhone.png" alt="">
+     <p class="font-medium text-base leading-6">Phones</p>
+   </div>
+   <div class="cursor-pointer border border-2 rounded-sm flex flex-col items-center max-w-40 p-5 hover:bg-red-500">
+    <img src="/images/Category-Computer.png" alt="">
+    <p class="font-medium text-base leading-6">Computers</p>
+  </div>
+  <div class="cursor-pointer border border-2 rounded-sm flex flex-col items-center max-w-40 p-5 hover:bg-red-500">
+    <img src="/images/Category-SmartWatch.png" alt="">
+    <p class="font-medium text-base leading-6">SmartWatch</p>
+  </div>
+  <div class="cursor-pointer border border-2 rounded-sm flex flex-col items-center max-w-40 p-5 hover:bg-red-500">
+    <img src="/images/Category-Camera.png" alt="">
+    <p class="font-medium text-base leading-6">Camera</p>
+  </div>
+  <div class="cursor-pointer border border-2 rounded-sm flex flex-col items-center max-w-40 p-5 hover:bg-red-500">
+    <img src="/images/Category-Headphone.png" alt="">
+    <p class="font-medium text-base leading-6">HeadPhones</p>
+  </div>
+  <div class="cursor-pointer border border-2 rounded-sm flex flex-col items-center max-w-40 p-5 hover:bg-red-500">
+    <img src="/images/Category-Gamepad.png" alt="">
+    <p class="font-medium text-base leading-6">Gaming</p>
+  </div>
+
+</div>
+   <!-- Catoories End -->
+
+   <!-- This Month -->
+      <div class="flex items-center gap-2 ml-5 mt-10">
+        <img src="/images/Rectangle 17.png" alt="">
+        <span class="text-red-600 font-medium text-base">This Month</span>
+      </div>
+
+      <div class="md:grid grid-cols-2">
+        <div class="md:ml-4 md:mt-5">
+          <p class="font-semibold text-4xl leading-10">Best Selling Products</p>
+        </div>
+        <div class="mt-3 md:mt-0">
+          <button class="bg-red-500 text-white font-medium text-base leading-6 py-3 px-8 rounded-sm md:float-end md:mr-10">View All</button>
+        </div> 
+      </div>
+    <!-- Croussal -->
+        <!-- Parent -->
+        <div class="container w-full grid sm:grid-cols-2 ml-5 mt-5 gap-8
+          md:grid-cols-2 ml-5 mt-5 lg:grid-cols-3 ml-5 mt-5 xl:grid-cols-4 ml-5 mt-5
+          ">
+        </div>
+        <!-- Parent -->
+     <!-- This Month -->
+
+
+    <!-- Frame -->
+    <div class="flex flex-wrap-reverse px-4 sm:px-8 md:px-16 lg:px-20 xl:px-40 justify-between mt-20">
+    <div class="mt-4 sm:mt-0">
+      <img src="/images/Frame 600.png" alt="">
+    </div>
+  </div>
+    <!-- Frame -->
+
+  <!-- Our Product -->
+  <div class="flex items-center gap-2 ml-5 mt-10">
+    <img src="/images/Rectangle 17.png" alt="">
+    <span class="text-red-600 font-medium text-base">Our Products</span>
+  </div>
+
+  <div class="md:ml-4 md:mt-5">
+    <p class="font-semibold text-4xl leading-10">Explore Our Products</p>
+  </div>
+
+<!-- Second List -->
+    <!-- Parent -->
+    <div class="Lcontainer w-full grid sm:grid-cols-2 ml-5 mt-5 gap-8
+    md:grid-cols-2 ml-5 mt-5 lg:grid-cols-3 ml-5 mt-5 xl:grid-cols-4 ml-5 mt-5
+    ">
+  </div>
+<!-- Parent end on below div -->
+
+
+
+
+  <!-- Button -->
+  <div class="flex justify-center ... mt-10">
+    <button class="bg-red-500 text-white font-medium text-base leading-6 w-44 h-10 rounded-sm" >View All Products</button>
+      </div> 
+     <!-- Button -->
+<!-- ........................... -->
+  <!-- Our Product -->
+  <!-- New Arrival -->
+  <div class="flex items-center gap-2 ml-5 mt-10">
+    <img src="/images/Rectangle 17.png" alt="">
+    <span class="text-red-600 font-medium text-base">Featured</span>
+  </div>
+
+  <div class="md:grid grid-cols-2">
+    <div class="md:ml-4 md:mt-5">
+      <p class="font-semibold text-4xl leading-10">New Arrival</p>
+    </div>
+  </div>
+    
+
+    <div class="xl:grid grid-flow-col gap-4 ml-10 mt-10 sm:grid grid-flow-col gap-4 mt-10" id="parent">
+      <div class="row-span-3" id="ps5">
+        <img src="images/Frame 684.png" alt="">
+      </div>
+      <div class="col-span-2 ml-0" id="womenColl">
+        <img src="images/Frame 685.png" alt="">
+      </div>
+       <div class="row-span-2 mt-3 ml-0" id="speaker">
+          <img src="images/Frame 686.png" alt="">
+      </div>
+        <div class="row-span-2 col-span-2 mt-3" id="gucci">
+          <img src="images/Frame 687.png" alt="">
+       </div>
+    </div>
+  <!-- New Arrival -->
+   <!-- Security -->
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 mt-20">
+    <!-- First Child -->
+    <div class="flex items-center flex-col">
+        <div class="border-8 border-black w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center">
+            <img src="/images/icon-delivery.png" alt="">
+        </div>
+        <div class="mt-2">
+            <p class="font-semibold text-xl leading-7">FREE AND FAST DELIVERY</p>
+            <p class="font-normal text-base leading-5">Free delivery for all orders over $140</p>
+        </div>
+    </div>
+
+    <!-- Second Child -->
+    <div class="flex items-center flex-col">
+        <div class="border-8 border-black w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center">
+          <img src="/images/Mic_con.png" alt="">
+        </div>
+        
+        <div class="mt-2">
+          <p class="font-semibold text-xl leading-7">24/7 CUSTOMER SERVICE</p>
+          <p class="font-normal text-base leading-5">Friendly 24/7 customer support</p>
+        </div>
+    </div>
+
+    <!-- Third Child -->
+    <div class="flex items-center flex-col">
+        <div class="border-8 border-black w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center">
+          <img src="/images/Icon-secure.png" alt="">
+        </div>
+        
+        <div class="mt-2">
+          <p class="font-semibold text-xl leading-7">MONEY BACK GUARANTEE</p>
+          <p class="font-normal text-base leading-5">We reurn money within 30 days</p>
+        </div>
+    </div>
+</div>
+
+     <!-- footer -->
+     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-20 bg-black text-white">
+      <!-- Your content goes here -->
+      <div class="p-5 relative w-4/5 m-auto space-y-5 ">
+        <p class="font-bold text-2xl leading-6">Exclusive</p>
+        <p class="font-medium text-xl leading-7 hover:underline cursor-pointer">Subscribe</p>
+        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Get 10% off your first order</p>
+        <input
+        type="email"
+        id="email"
+        name="email"
+        class=" bg-black  mt-1 p-2 border border-gray-300 rounded-sm "
+        placeholder="Enter your email"
+        />
+        <img src="/images/icon-send.png" alt="" id="send-icon" class="text-white">
+
+      </div>
+
+
+      <!-- Your content goes here -->
+      <div class="p-5 space-y-5">
+        <p class="font-medium text-xl leading-7">Support</p>
+        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">111 Bijoy sarani, Dhaka</p>
+        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">DH 1515, Bangladesh.</p>
+        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">exclusive@gmail.com</p>
+        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">+88015-88888-9999</p>
+      </div>
+      <!-- Your content goes here -->
+      <div class="p-5 space-y-5">
+        <p class="font-medium text-xl leading-7">Account</p>
+        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">My Account</p>
+        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Login / Register</p>
+        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Cart</p>
+        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Wishlist</p>
+        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Shop</p>
+      </div>
+      <!-- Your content goes here -->
+      <div class="p-5 space-y-5">
+        <p class="font-medium text-xl leading-7">Quick Link</p>
+        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Privacy Policy</p>
+        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Terms Of Use</p>
+        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">FAQ</p>
+        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Contact</p>
+      </div>
+      <!-- Your content goes here -->
+      <div class="p-5 space-y-5">
+        <p class="font-medium text-xl leading-7">Download App</p>
+        <p class="font-medium text-base leading-5">Save $3 with App New User Only</p>
+        <!-- playstore and appstore -->
+
+        <div class="grid grid-rows-3 grid-flow-col">
+          <div class="row-span-3 ... cursor-pointer"><img src="/images/Qrcode 1.png" alt=""></div>
+          <div class="col-span-2 ... cursor-pointer"><img src="/images/google_play.png" alt=""></div>
+          <div class="col-span-2 ... cursor-pointer"><img src="/images/download-appstore.png" alt=""></div>
+        </div>
+        <!-- playstore and appstore -->
+         <!-- Social links -->
+         <div class="flex justify-content   space-x-8" id="social">
+          <img src="/images/fb.png" alt=""  class="cursor-pointer">
+          <img src="/images/tweet.png" alt="" class="cursor-pointer">
+          <img src="/images/icon-instagram.png" alt="" class="cursor-pointer">
+          <img src="/images/Icon-Linkedin.png" alt="" class="cursor-pointer">
+         </div>
+         <!-- Social links -->
+
+      </div>
+    </div>
+    <!-- Copyright -->
+     <div class="text-center bg-black">
+        <p style="color: rgba(160, 163, 189, 1);">&copy Copyright Rimel 2022. All right reserved</p>
+     </div>
+
+       <script src="HomePageLogic.js"></script>
+</body>
+</html>
+
