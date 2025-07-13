@@ -85,7 +85,7 @@
         <img src="/images/search_icon.png" alt="Search" class="w-6 h-6" />
         <img src="/images/like.png" alt="Like" class="w-6 h-6" />
         <a href="/AddToCart.html"
-          ><img src="/images/Cart1.png" alt="Cart" class="w-6 h-6"
+          ><img src="/images/Cart1.png" alt="Cart" class="w-6 h-7"
         /></a>
       </div>
     </header>
@@ -129,7 +129,7 @@
           class="absolute top-3 right-14 w-5 h-5"
         />
         <a href="/AddToCart.html" class="absolute top-3 right-4">
-          <img src="/images/Cart1.png" alt="Cart" class="w-6 h-6" />
+          <img src="/images/Cart1.png" alt="Cart" class="w-6 h-7" />
         </a>
       </div>
     </div>
@@ -183,7 +183,7 @@
         <p class="font-semibold text-4xl leading-10">Flash Sales</p>
       </div>
       <!-- Time Remaining -->
-      <div id="timer">
+      <div id="timer" class="flex flex-col items-center justify-center text-center">
         <span class="font-medium flex gap-7 ml-1">
           <p>Days</p>
           <p>Hours</p>
@@ -201,7 +201,7 @@
 
     <!-- Parent -->
     <div
-      class="container-card grid place-items-center sm:grid-cols-2 ml-5 mt-5 gap-8 md:grid-cols-3 ml-5 mt-5 lg:grid-cols-3 ml-5 mt-5 xl:grid-cols-4 ml-5 mt-5"
+      class="container-card grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-8 place-items-center mx-auto mt-5 px-4"
     ></div>
 
     <!-- Button -->
@@ -284,7 +284,7 @@
     <!-- Croussal -->
     <!-- Parent -->
     <div
-      class="container w-full grid sm:grid-cols-2 ml-5 mt-5 gap-8 md:grid-cols-2 ml-5 mt-5 lg:grid-cols-3 ml-5 mt-5 xl:grid-cols-4 ml-5 mt-5"
+      class="container w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 place-items-center mx-auto mt-5 px-4"
     ></div>
     <!-- Parent -->
     <!-- This Month -->
@@ -312,7 +312,7 @@
     <!-- Second List -->
     <!-- Parent -->
     <div
-      class="Lcontainer w-full grid sm:grid-cols-2 ml-5 mt-5 gap-8 md:grid-cols-2 ml-5 mt-5 lg:grid-cols-3 ml-5 mt-5 xl:grid-cols-4 ml-5 mt-5"
+      class="Lcontainer w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 place-items-center mx-auto mt-5 px-4"
     ></div>
     <!-- Parent end on below div -->
 
@@ -339,23 +339,39 @@
       </div>
     </div>
 
-    <div
-      class="xl:grid grid-flow-col gap-4 ml-10 mt-10 sm:grid grid-flow-col gap-4 mt-10"
-      id="parent"
-    >
-      <div class="row-span-3" id="ps5">
-        <img src="images/Frame 684.png" alt="" />
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-10 px-5" id="parent">
+      <div class="lg:col-span-2">
+        <img
+          src="images/Frame 684.png"
+          alt="PS5"
+          class="w-full h-auto rounded-md"
+        />
       </div>
-      <div class="col-span-2 ml-0" id="womenColl">
-        <img src="images/Frame 685.png" alt="" />
-      </div>
-      <div class="row-span-2 mt-3 ml-0" id="speaker">
-        <img src="images/Frame 686.png" alt="" />
-      </div>
-      <div class="row-span-2 col-span-2 mt-3" id="gucci">
-        <img src="images/Frame 687.png" alt="" />
+
+      <div class="grid grid-cols-1 gap-4">
+        <div>
+          <img
+            src="images/Frame 685.png"
+            alt="Women"
+            class="w-full h-auto rounded-md"
+          />
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <img
+            src="images/Frame 686.png"
+            alt="Speaker"
+            class="w-full h-auto rounded-md"
+          />
+          <img
+            src="images/Frame 687.png"
+            alt="Gucci"
+            class="w-full h-auto rounded-md"
+          />
+        </div>
       </div>
     </div>
+
     <!-- New Arrival -->
     <!-- Security -->
     <div
@@ -411,7 +427,7 @@
 
     <!-- footer -->
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-20 bg-black text-white"
+      class="grid place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-20 bg-black text-white"
     >
       <!-- Your content goes here -->
       <div class="p-5 relative w-4/5 m-auto space-y-5">

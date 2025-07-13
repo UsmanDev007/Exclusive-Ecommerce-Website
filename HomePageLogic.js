@@ -11,7 +11,7 @@ closeBtn.addEventListener("click", () => {
 });
 
 // Time out
-const countDownDate = new Date("Dec 31, 2025 00:00:00").getTime();
+const countDownDate = new Date("Jan 31, 2026 00:00:00").getTime();
 
 const x = setInterval(function () {
   const now = new Date().getTime();
@@ -91,34 +91,46 @@ const cardsData = [
 function createCard(card) {
   const cardElement = document.createElement("div");
   cardElement.innerHTML = `
-    <div class="relative max-w-64 bg-slate-100">
-    <span class="text-white bg-red-500 rounded-sm px-2 py-1">${card.off}</span>
-    <div class="flex justify-center">
-    <img src="${card.img}" alt="" class="card-img pl-2">
+    <div class="relative w-72 bg-slate-100 rounded-lg shadow-md p-4 m-2 flex flex-col">
+      
+      <!-- Discount Badge -->
+      <span class="absolute top-2 left-2 text-white bg-red-500 rounded-sm px-2 py-1 text-xs">${card.off}</span>
+      
+      <!-- Product Image Container (fixed height + center alignment) -->
+      <div class="flex justify-center items-center h-40 mb-3">
+        <img src="${card.img}" alt="Product" class="max-h-full object-contain" />
+      </div>
+
+      <!-- Like + Quick View Icons -->
+      <div class="absolute top-2 right-2 flex flex-col items-center gap-2">
+        <img src="/images/like.png" alt="Like" class="w-5 cursor-pointer">
+        <img src="/images/Quick View.png" alt="Quick View" class="w-5 cursor-pointer">
+      </div>
+
+      <!-- Add to Cart Button -->
+      <button class="w-full bg-black text-white p-2 mt-2 rounded hover:bg-gray-800 transition duration-300">
+        Add to Cart
+      </button>
+
+      <!-- Product Name -->
+      <p class="font-medium text-base leading-6 mt-3 text-center">${card.productName}</p>
+
+      <!-- Price Section -->
+      <div class="flex justify-center items-center gap-2 mt-1">
+        <span class="text-red-500 font-medium">${card.orginalPrice}</span>
+        <span class="line-through text-slate-500 font-medium">${card.discountPrice}</span>
+      </div>
+
+      <!-- Rating -->
+      <div class="flex justify-center items-center gap-1 mt-2">
+        <img src="${card.ratingImg}" alt="Rating" class="w-20 h-auto">
+        <p class="text-slate-500 font-semibold text-sm">${card.ratnum}</p>
+      </div>
     </div>
- 
-    <div class="absolute top-2" style="left:90%;">
-    <div class="flex flex-col align-center gap-3">
-    <img src="/images/like.png" alt="" class="w-5">
-    <img src="/images/Quick View.png" alt="">
-    </div>
-    </div>
-    <Button class="mx-auto w-full bg-black mt-5 text-white p-2 rounded-br">Add to Cart</Button>
-    <p class="font-medium text-base leading-6">${card.productName}</p>
-    <div class="space-x-1">
-    <span class="font-medium text-base leading-6 text-red-500">${card.orginalPrice}</span>
-    <span class="font-medium text-base leading-6 line-through text-slate-500">${card.discountPrice}</span>
-    </div>
-    <div class="flex">
-    <img src="${card.ratingImg}" alt="">
-    <p class="ratnum text-slate-500 font-semibold text-sm leading-5">
-   ${card.ratnum}
-  </p>
-    </div>
-  </div> 
-    `;
+  `;
   return cardElement;
 }
+
 cardsData.map((card) => {
   const container = document.querySelector(".container-card");
   const cardElement = createCard(card);
@@ -179,33 +191,49 @@ const cardData1 = [
 cardData1.map((card) => {
   const conta = document.querySelector(".container");
   const childCard = document.createElement("div");
-  childCard.innerHTML = `<div class="relative max-w-64 bg-slate-100">
-   <span class="text-white bg-red-500 rounded-sm px-2 py-1">${card.off}</span>
-   <div class="flex justify-center">
-   <img src="${card.img}" alt="" class="card-img pl-2">
-   </div>
 
-   <div class="absolute top-2" style="left:90%;">
-   <div class="flex flex-col align-center gap-3">
-   <img src="/images/like.png" alt="" class="w-5">
-   <img src="/images/Quick View.png" alt="">
-   </div>
-   </div>
-   <Button class="mx-auto w-full bg-black mt-5 text-white p-2 rounded-br">Add to Cart</Button>
-   <p class="font-medium text-base leading-6">${card.productName}</p>
-   <div class="space-x-1">
-   <span class="font-medium text-base leading-6 text-red-500">${card.orginalPrice}</span>
-   <span class="font-medium text-base leading-6 line-through text-slate-500">${card.discountPrice}</span>
-   </div>
-   <div class="flex">
-   <img src="${card.ratingImg}" alt="">
-   <p class="ratnum text-slate-500 font-semibold text-sm leading-5">
-  ${card.ratnum}
- </p>
-   </div>
- </div> `;
+  childCard.innerHTML = `
+    <div class="relative w-72 bg-slate-100 rounded-lg shadow-md p-4 m-2 flex flex-col">
+      
+      <!-- Discount Badge -->
+      <span class="absolute top-2 left-2 text-white bg-red-500 rounded-sm px-2 py-1 text-xs">${card.off}</span>
+      
+      <!-- Product Image Container -->
+      <div class="flex justify-center items-center h-40 mb-3">
+        <img src="${card.img}" alt="Product" class="max-h-full object-contain" />
+      </div>
+
+      <!-- Like + Quick View Icons -->
+      <div class="absolute top-2 right-2 flex flex-col items-center gap-2">
+        <img src="/images/like.png" alt="Like" class="w-5 cursor-pointer" />
+        <img src="/images/Quick View.png" alt="Quick View" class="w-5 cursor-pointer" />
+      </div>
+
+      <!-- Add to Cart Button -->
+      <button class="w-full bg-black text-white p-2 mt-2 rounded hover:bg-gray-800 transition duration-300">
+        Add to Cart
+      </button>
+
+      <!-- Product Name -->
+      <p class="font-medium text-base leading-6 mt-3 text-center">${card.productName}</p>
+
+      <!-- Price Section -->
+      <div class="flex justify-center items-center gap-2 mt-1">
+        <span class="text-red-500 font-medium">${card.orginalPrice}</span>
+        <span class="line-through text-slate-500 font-medium">${card.discountPrice}</span>
+      </div>
+
+      <!-- Rating -->
+      <div class="flex justify-center items-center gap-1 mt-2">
+        <img src="${card.ratingImg}" alt="Rating" class="w-20 h-auto" />
+        <p class="text-slate-500 font-semibold text-sm">${card.ratnum}</p>
+      </div>
+    </div>
+  `;
+
   conta.appendChild(childCard);
 });
+
 
 // 3rd row
 const cardData2 = [
@@ -310,33 +338,49 @@ for (i = 0; i < cardData2.length; i++) {
 cardData2.map((card) => {
   const conta = document.querySelector(".Lcontainer");
   const childCard = document.createElement("div");
-  childCard.innerHTML = `<div class="relative max-w-64 bg-slate-100">
-   <span class="text-white bg-red-500 rounded-sm px-2 py-1">${card.off}</span>
-   <div class="flex justify-center">
-   <img src="${card.img}" alt="" class="card-img pl-2">
-   </div>
 
-   <div class="absolute top-2" style="left:90%;">
-   <div class="flex flex-col align-center gap-3">
-   <img src="/images/like.png" alt="" class="w-5">
-   <img src="/images/Quick View.png" alt="">
-   </div>
-   </div>
-   <Button class="Add_Cart mx-auto w-full bg-black mt-5 text-white p-2 rounded-br">Add to Cart</Button>
-   <p class="font-medium text-base leading-6">${card.productName}</p>
-   <div class="space-x-1">
-   <span class="font-medium text-base leading-6 text-red-500">${card.orginalPrice}</span>
-   <span class="font-medium text-base leading-6 line-through text-slate-500">${card.discountPrice}</span>
-   </div>
-   <div class="flex">
-   <img src="${card.ratingImg}" alt="">
-   <p class="ratnum text-slate-500 font-semibold text-sm leading-5">
-  ${card.ratnum}
- </p>
-   </div>
- </div> `;
+  childCard.innerHTML = `
+    <div class="relative w-72 bg-slate-100 rounded-lg shadow-md p-4 m-2 flex flex-col">
+      
+      <!-- Discount Badge -->
+      <span class="absolute top-2 left-2 text-white bg-red-500 rounded-sm px-2 py-1 text-xs">${card.off}</span>
+      
+      <!-- Product Image Container -->
+      <div class="flex justify-center items-center h-40 mb-3">
+        <img src="${card.img}" alt="Product" class="max-h-full object-contain" />
+      </div>
+
+      <!-- Like + Quick View Icons -->
+      <div class="absolute top-2 right-2 flex flex-col items-center gap-2">
+        <img src="/images/like.png" alt="Like" class="w-5 cursor-pointer" />
+        <img src="/images/Quick View.png" alt="Quick View" class="w-5 cursor-pointer" />
+      </div>
+
+      <!-- Add to Cart Button -->
+      <button class="Add_Cart w-full bg-black text-white p-2 mt-2 rounded hover:bg-gray-800 transition duration-300">
+        Add to Cart
+      </button>
+
+      <!-- Product Name -->
+      <p class="font-medium text-base leading-6 mt-3 text-center">${card.productName}</p>
+
+      <!-- Price Section -->
+      <div class="flex justify-center items-center gap-2 mt-1">
+        <span class="text-red-500 font-medium">${card.orginalPrice}</span>
+        <span class="line-through text-slate-500 font-medium">${card.discountPrice}</span>
+      </div>
+
+      <!-- Rating -->
+      <div class="flex justify-center items-center gap-1 mt-2">
+        <img src="${card.ratingImg}" alt="Rating" class="w-20 h-auto" />
+        <p class="text-slate-500 font-semibold text-sm">${card.ratnum}</p>
+      </div>
+    </div>
+  `;
+
   conta.appendChild(childCard);
 });
+
 
 // Function to add product to cart
 function addToCart(index) {
