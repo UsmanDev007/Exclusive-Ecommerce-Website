@@ -1,15 +1,11 @@
-const mob=document.querySelector('.Mobile');
-const burger=document.querySelector('#Hamburger');
+  const openBtn = document.getElementById("mobile-menu-button");
+  const closeBtn = document.getElementById("mobile-menu-close");
+  const menu = document.getElementById("mobile-menu");
 
-burger.addEventListener('click',()=>{
-    if(mob.style.display=='none'){
-        mob.style.display= 'grid';
-        mob.style.gridTemplateColumns= 'repeat(1,1fr)';
-        mob.style.rowGap= '20px';
-    }
-    else{
-        mob.style.display= 'none';
-    }
-    
+  openBtn.addEventListener("click", () => {
+    menu.classList.remove("hidden");
+  });
 
-})
+  closeBtn.addEventListener("click", () => {
+    menu.classList.add("hidden");
+  });

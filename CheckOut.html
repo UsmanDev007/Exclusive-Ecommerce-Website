@@ -1,239 +1,453 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About SavyCal-Ecommerce Website</title>
-    <link rel="stylesheet" href="CheckOut.css">
-    <link rel="icon" href="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" type="image/icon type">
+    <link rel="stylesheet" href="CheckOut.css" />
+    <link
+      rel="icon"
+      href="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
+      type="image/icon type"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <div class="bg-black text-white " >
-        <div class="text-center xl:space-x-48 p-2 ">
-          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!   
-          <span  class="underline ... font-semibold ">ShopNow</span>
-          <select id="language" class="bg-black text-white">
-              <option selected>English</option>
-              <option value="UR">Urdu</option>
-              <option value="FR">French</option>
-              <option value="TU">Turkish</option>
-            </select>
-        </div> 
-  </div> 
-  <!-- navbar -->
+  </head>
+  <body>
+    <div class="bg-black text-white">
+      <div class="text-center xl:space-x-48 p-2">
+        Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+        <span class="underline ... font-semibold">ShopNow</span>
+        <select id="language" class="bg-black text-white">
+          <option selected>English</option>
+          <option value="UR">Urdu</option>
+          <option value="FR">French</option>
+          <option value="TU">Turkish</option>
+        </select>
+      </div>
+    </div>
+    <!-- navbar -->
 
-       <!-- Hamburger -->
-       <div class="grid grid-cols-3 gap-4 mt-5" >
-        <div class="lg:hidden" id="Hamburger">
-            <button id="mobile-menu-button" class=" hover:text-black-900 focus:outline-none">
-              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-              </svg>
-            </button>
-          </div>
-        <!-- Logo -->
-        <div>
-            <img src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48" class="mr-5">
-        </div>
-          <!-- links -->
-        <div class="hidden lg:flex justify-center space-x-10 mt-2">
-            <a href="HomePage.html" class="text-black-900  hover:underline">Home</a>
-            <a href="Contact.html" class="text-black-900 hover:underline">Contact</a>
-            <a href="About.html" class="text-black-900 hover:underline">About</a>
-            <a href="index.html" class="text-black-900 hover:underline">SignUp</a>
-
-        </div>
-          <!-- Search Shop Buy -->
-        <div class="relative pl-10" id="links-hide">
-            <!-- search -->
-              <input type="text" name="" id="" placeholder="looking for?"
-              class="p-2 "
-              >
-              <img src="/images/search_icon.png" alt="" class="absolute top-3 left-52">
-              <img src="/images/like.png" alt="" class="absolute top-3 left-64" >
-             <a href="AddToCart.html"> <img src="/images/Cart1.png" alt="" class="absolute top-2 left-72">
-             </a>
-            <!-- search -->
-            
-        </div>
+    <!-- Hamburger -->
+    <header
+      class="w-full bg-white shadow-md flex items-center justify-between flex-wrap"
+    >
+      <!-- Logo -->
+      <div class="flex items-center flex-shrink-0">
+        <img
+          src="https://cdn.dribbble.com/userupload/17039933/file/original-dbbc84c08bd6b4b49fc97827fa5be468.jpg?resize=1504x1128&vertical=center"
+          alt="SavvyCal"
+          class="w-24 mr-4"
+        />
       </div>
 
+      <!-- Hamburger Button (Mobile) -->
+      <div class="block lg:hidden">
+        <button
+          id="mobile-menu-button"
+          class="text-black hover:text-gray-800 focus:outline-none"
+        >
+          <svg
+            class="h-8 w-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
 
-       <!-- Mobile Menu -->
-       <div class="Mobile fixed text-white bg-gray-700 bg-opacity-75">
-        <a href="HomePage.html" class="text-black-900 hover:underline">Home</a>
-        <a href="Contact.html" class="text-black-900 hover:underline">Contact</a>
-        <a href="About.html" class="text-black-900 hover:underline">About</a>
-        <a href="index.html" class="text-black-900 hover:underline">SignUp</a>
-        <div class="relative">
-            <!-- search -->
-              <input type="text" name="" id="" placeholder="looking for?"
-              class="p-2"
-              >
-              <img src="/images/search_icon.png" alt="" class="absolute top-3 left-40">
-              <img src="/images/like.png" alt="" class="absolute top-3 left-48" >
-              <a href="AddToCart.html"><img src="/images/Cart1.png" alt="" class="absolute top-2 left-56">
-              </a>
-            <!-- search -->
-        </div>
-       </div>
-       <p class="text-3xl font-medium leading-7 mt-10 ml-10">Billing Details</p>
+      <!-- Nav Links (Desktop) -->
+      <nav
+        class="hidden w-full lg:flex lg:items-center lg:w-auto space-x-6 mt-4 lg:mt-0"
+      >
+        <a href="#" class="text-black hover:underline">Home</a>
+        <a href="#" class="text-black hover:underline">Contact</a>
+        <a href="#" class="text-black hover:underline">About</a>
+        <a href="Signup.html" class="text-black hover:underline">SignUp</a>
+      </nav>
 
-       <div class="grid sm:grid-cols-1 md:grid-cols-2">
-        <!-- First Column (form) -->
-        <div>
-            <form class="max-w-sm md:ml-10 sm:mt-8">
-                <!-- Form content here -->
-                <div class="mb-5">
-                    <label for="base-input" class="block mb-2 text-base fon-normal text-gray-500 dark:text-white">First Name</label>
-                    <input type="text" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                </div>
-                <div class="mb-5">
-                    <label for="base-input" class="block mb-2 text-base fon-normal text-gray-500 dark:text-white">Company Name</label>
-                    <input type="text" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                </div>
-                <div class="mb-5">
-                    <label for="base-input" class="block mb-2 text-base fon-normal text-gray-500 dark:text-white">Street Adress</label>
-                    <input type="text" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                </div>
-                <div class="mb-5">
-                    <label for="base-input" class="block mb-2 text-base fon-normal text-gray-500 dark:text-white">Apartment, floor, etc. (optional)</label>
-                    <input type="text" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                </div>
-                <div class="mb-5">
-                    <label for="base-input" class="block mb-2 text-base fon-normal text-gray-500 dark:text-white">Town/City</label>
-                    <input type="text" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                </div>
-                <div class="mb-5">
-                    <label for="base-input" class="block mb-2 text-base fon-normal text-gray-500 dark:text-white">Phone Number</label>
-                    <input type="text" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                </div>
-                <div class="mb-5">
-                    <label for="base-input" class="block mb-2 text-base fon-normal text-gray-500 dark:text-white">Email Address</label>
-                    <input type="email" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                </div>
-                <div class="flex gap-2 mt-10">
-                    <input checked id="red-checkbox" type="checkbox" value="" class="h-5 w-5 border-gray-300 rounded checked:ring-indigo-500 mt-1">
-                    <p class="font-semibold text-base leading-7">Save this information for check-out next time</p>
-                </div>
-            </form>
-        </div>
-    
-        <!-- Second Column (payment) -->
-        <div class="flex flex-col">
-            <!-- Payment options -->
-            <div class="flex flex-col md:gap-10 sm:flex-row gap-2 ml-10">
-                <!-- Bank payment -->
-                <div class="child-div flex items-center gap-2">
-                    <input type="radio" class="h-5 w-5">
-                    <label for="base-input" class="font-medium">Bank</label>
-                </div>
-    
-                <!-- Payment methods -->
-                <div class="child-div acounts flex gap-2">
-                    <!-- Payment method images -->
-                    <img src="images/bkash.png" alt="" class="cursor-pointer">
-                    <img src="images/visa.png" alt="" class="cursor-pointer">
-                    <img src="images/nastercard.png" alt="" class="cursor-pointer">
-                    <img src="images/bharat.png" alt="" class="cursor-pointer">
-                </div>
-            </div>
-    
-            <!-- Cash on Delivery -->
-            <div class="child-div flex items-center gap-2 mt-3 ml-10">
-                <input type="radio" name="" id="" class="h-5 w-5">
-                <label for="base-input" class="font-medium">Cash on Delivery</label>
-            </div>
-    
-            <!-- Coupon Code and Apply Button -->
-            <div class="child-div flex flex-wrap gap-2 mt-10 ml-10">
-                <div>
-                    <input type="text" id="first_name" class="bg-gray-50 border border-gray-500 text-gray-900 text-sm rounded-sm block p-2.5 px-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-500 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Coupon Code" />
-                </div>
-                <div>
-                    <button type="submit" class="text-white bg-red-500 font-medium rounded-sm text-sm px-3.5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Apply Coupon</button>
-                </div>
-            </div>
-    
-            <!-- Place Order Button -->
-            <div class="child-div mt-3 ml-10">
-                <button type="submit" id="openModalBtn" class="text-white bg-red-500 font-medium rounded-sm text-sm px-6 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Place Order</button>
-            </div>
-        </div>
+      <!-- Search + Icons -->
+      <div
+        class="relative hidden lg:flex items-center space-x-4 ml-auto mt-4 lg:mt-0"
+      >
+        <input
+          type="text"
+          placeholder="Looking for?"
+          class="p-2 border rounded-lg shadow-sm focus:outline-none w-64"
+        />
+        <img src="/images/search_icon.png" alt="Search" class="w-6 h-6" />
+        <img src="/images/like.png" alt="Like" class="w-6 h-6" />
+        <a href="/AddToCart.html"
+          ><img src="/images/Cart1.png" alt="Cart" class="w-6 h-6"
+        /></a>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="lg:hidden hidden flex flex-col space-y-4 p-4 bg-white shadow-md absolute top-20 left-0 w-full z-50"
+    >
+      <!-- Close Button -->
+      <div class="flex justify-end">
+        <button
+          id="mobile-menu-close"
+          class="text-gray-600 hover:text-black text-2xl font-bold focus:outline-none"
+        >
+          &times;
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <a href="#" class="text-black hover:underline">Home</a>
+      <a href="#" class="text-black hover:underline">Contact</a>
+      <a href="#" class="text-black hover:underline">About</a>
+      <a href="Signup.html" class="text-black hover:underline">SignUp</a>
+
+      <!-- Search and Icons -->
+      <div class="relative mt-4">
+        <input
+          type="text"
+          placeholder="Looking for?"
+          class="w-full p-2 border rounded-lg shadow-sm focus:outline-none"
+        />
+        <img
+          src="/images/search_icon.png"
+          alt="Search"
+          class="absolute top-3 right-24 w-5 h-5"
+        />
+        <img
+          src="/images/like.png"
+          alt="Like"
+          class="absolute top-3 right-14 w-5 h-5"
+        />
+        <a href="/AddToCart.html"
+          ><img src="/images/Cart1.png" alt="Cart" class="w-6 h-6"
+        /></a>
+      </div>
     </div>
-    
-    
+
+    <p class="text-3xl font-medium leading-7 mt-10 ml-10">Billing Details</p>
+
+    <div class="grid sm:grid-cols-1 md:grid-cols-2">
+      <!-- First Column (form) -->
+      <div>
+        <form class="max-w-sm md:ml-10 sm:mt-8">
+          <!-- Form content here -->
+          <div class="mb-5">
+            <label
+              for="base-input"
+              class="block mb-2 text-base fon-normal text-gray-500 dark:text-white"
+              >First Name</label
+            >
+            <input
+              type="text"
+              id="base-input"
+              placeholder="First name"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+          </div>
+          <div class="mb-5">
+            <label
+              for="base-input"
+              class="block mb-2 text-base fon-normal text-gray-500 dark:text-white"
+              >Company Name</label
+            >
+            <input
+              type="text"
+              id="base-input"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Company name"
+            />
+          </div>
+          <div class="mb-5">
+            <label
+              for="base-input"
+              class="block mb-2 text-base fon-normal text-gray-500 dark:text-white"
+              >Street Adress</label
+            >
+            <input
+              type="text"
+              id="base-input"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Street Adress"
+            />
+          </div>
+          <div class="mb-5">
+            <label
+              for="base-input"
+              class="block mb-2 text-base fon-normal text-gray-500 dark:text-white"
+              >Apartment, floor, etc. (optional)</label
+            >
+            <input
+              type="text"
+              id="base-input"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Apartment, floor, etc. "
+            />
+          </div>
+          <div class="mb-5">
+            <label
+              for="base-input"
+              class="block mb-2 text-base fon-normal text-gray-500 dark:text-white"
+              >Town/City</label
+            >
+            <input
+              type="text"
+              id="base-input"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Town/City"
+            />
+          </div>
+          <div class="mb-5">
+            <label
+              for="base-input"
+              class="block mb-2 text-base fon-normal text-gray-500 dark:text-white"
+              >Phone Number</label
+            >
+            <input
+              type="text"
+              id="base-input"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Phone Number"
+            />
+          </div>
+          <div class="mb-5">
+            <label
+              for="base-input"
+              class="block mb-2 text-base fon-normal text-gray-500 dark:text-white"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              id="base-input"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Email Adress"
+            />
+          </div>
+          <div class="flex gap-2 mt-10">
+            <input
+              checked
+              id="red-checkbox"
+              type="checkbox"
+              value=""
+              class="h-5 w-5 border-gray-300 rounded checked:ring-indigo-500 mt-1"
+            />
+            <p class="font-semibold text-base leading-7">
+              Save this information for check-out next time
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Second Column (payment) -->
+      <div class="flex flex-col">
+        <!-- Payment options -->
+        <div class="flex flex-col md:gap-10 sm:flex-row gap-2 ml-10">
+          <!-- Bank payment -->
+          <div class="child-div flex items-center gap-2">
+            <input type="radio" class="h-5 w-5" />
+            <label for="base-input" class="font-medium">Bank</label>
+          </div>
+
+          <!-- Payment methods -->
+          <div class="child-div acounts flex gap-2">
+            <!-- Payment method images -->
+            <img src="images/bkash.png" alt="" class="cursor-pointer" />
+            <img src="images/visa.png" alt="" class="cursor-pointer" />
+            <img src="images/nastercard.png" alt="" class="cursor-pointer" />
+            <img src="images/bharat.png" alt="" class="cursor-pointer" />
+          </div>
+        </div>
+
+        <!-- Cash on Delivery -->
+        <div class="child-div flex items-center gap-2 mt-3 ml-10">
+          <input type="radio" name="" id="" class="h-5 w-5" />
+          <label for="base-input" class="font-medium">Cash on Delivery</label>
+        </div>
+
+        <!-- Coupon Code and Apply Button -->
+        <div class="child-div flex flex-wrap gap-2 mt-10 ml-10">
+          <div>
+            <input
+              type="text"
+              id="first_name"
+              class="bg-gray-50 border border-gray-500 text-gray-900 text-sm rounded-sm block p-2.5 px-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-500 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Coupon Code"
+            />
+          </div>
+          <div>
+            <button
+              type="submit"
+              class="text-white bg-red-500 font-medium rounded-sm text-sm px-3.5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Apply Coupon
+            </button>
+          </div>
+        </div>
+
+        <!-- Place Order Button -->
+        <div class="child-div mt-3 ml-10">
+          <button
+            type="submit"
+            id="openModalBtn"
+            class="text-white bg-red-500 font-medium rounded-sm text-sm px-6 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Place Order
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- footer -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-20 bg-black text-white">
-        <!-- Your content goes here -->
-        <div class="p-5 relative w-4/5 m-auto space-y-5 ">
-          <p class="font-bold text-2xl leading-6">Exclusive</p>
-          <p class="font-medium text-xl leading-7 hover:underline cursor-pointer">Subscribe</p>
-          <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Get 10% off your first order</p>
-          <input
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-20 bg-black text-white"
+    >
+      <!-- Your content goes here -->
+      <div class="p-5 relative w-4/5 m-auto space-y-5">
+        <p class="font-bold text-2xl leading-6">Exclusive</p>
+        <p class="font-medium text-xl leading-7 hover:underline cursor-pointer">
+          Subscribe
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          Get 10% off your first order
+        </p>
+        <input
           type="email"
           id="email"
           name="email"
-          class=" bg-black  mt-1 p-2 border border-gray-300 rounded-sm "
+          class="bg-black mt-1 p-2 border border-gray-300 rounded-sm"
           placeholder="Enter your email"
-          />
-          <img src="/images/icon-send.png" alt="" id="send-icon" class="text-white">
-  
-        </div>
-  
-  
-        <!-- Your content goes here -->
-        <div class="p-5 space-y-5">
-          <p class="font-medium text-xl leading-7">Support</p>
-          <p class="font-normal text-base leading-6 hover:underline cursor-pointer">111 Bijoy sarani, Dhaka</p>
-          <p class="font-normal text-base leading-6 hover:underline cursor-pointer">DH 1515, Bangladesh.</p>
-          <p class="font-normal text-base leading-6 hover:underline cursor-pointer">exclusive@gmail.com</p>
-          <p class="font-normal text-base leading-6 hover:underline cursor-pointer">+88015-88888-9999</p>
-        </div>
-        <!-- Your content goes here -->
-        <div class="p-5 space-y-5">
-          <p class="font-medium text-xl leading-7">Account</p>
-          <p class="font-normal text-base leading-6 hover:underline cursor-pointer">My Account</p>
-          <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Login / Register</p>
-          <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Cart</p>
-          <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Wishlist</p>
-          <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Shop</p>
-        </div>
-        <!-- Your content goes here -->
-        <div class="p-5 space-y-5">
-          <p class="font-medium text-xl leading-7">Quick Link</p>
-          <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Privacy Policy</p>
-          <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Terms Of Use</p>
-          <p class="font-normal text-base leading-6 hover:underline cursor-pointer">FAQ</p>
-          <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Contact</p>
-        </div>
-        <!-- Your content goes here -->
-        <div class="p-5 space-y-5">
-          <p class="font-medium text-xl leading-7">Download App</p>
-          <p class="font-medium text-base leading-5">Save $3 with App New User Only</p>
-          <!-- playstore and appstore -->
-  
-          <div class="grid grid-rows-3 grid-flow-col">
-            <div class="row-span-3 ... cursor-pointer"><img src="/images/Qrcode 1.png" alt=""></div>
-            <div class="col-span-2 ... cursor-pointer"><img src="/images/google_play.png" alt=""></div>
-            <div class="col-span-2 ... cursor-pointer"><img src="/images/download-appstore.png" alt=""></div>
-          </div>
-          <!-- playstore and appstore -->
-           <!-- Social links -->
-           <div class="flex justify-content   space-x-8" id="social">
-            <img src="/images/fb.png" alt=""  class="cursor-pointer">
-            <img src="/images/tweet.png" alt="" class="cursor-pointer">
-            <img src="/images/icon-instagram.png" alt="" class="cursor-pointer">
-            <img src="/images/Icon-Linkedin.png" alt="" class="cursor-pointer">
-           </div>
-           <!-- Social links -->
-  
-        </div>
+        />
+        <img
+          src="/images/icon-send.png"
+          alt=""
+          id="send-icon"
+          class="text-white"
+        />
       </div>
-      <!-- Copyright -->
-       <div class="text-center bg-black">
-          <p style="color: rgba(160, 163, 189, 1);">&copy Copyright Rimel 2022. All right reserved</p>
-       </div>
-       <script src="CheckOut.js"></script>
-    </body>
-    </html>
+
+      <!-- Your content goes here -->
+      <div class="p-5 space-y-5">
+        <p class="font-medium text-xl leading-7">Support</p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          111 Bijoy sarani, Dhaka
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          DH 1515, Bangladesh.
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          exclusive@gmail.com
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          +88015-88888-9999
+        </p>
+      </div>
+      <!-- Your content goes here -->
+      <div class="p-5 space-y-5">
+        <p class="font-medium text-xl leading-7">Account</p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          My Account
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          Login / Register
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          Cart
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          Wishlist
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          Shop
+        </p>
+      </div>
+      <!-- Your content goes here -->
+      <div class="p-5 space-y-5">
+        <p class="font-medium text-xl leading-7">Quick Link</p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          Privacy Policy
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          Terms Of Use
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          FAQ
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          Contact
+        </p>
+      </div>
+      <!-- Your content goes here -->
+      <div class="p-5 space-y-5">
+        <p class="font-medium text-xl leading-7">Download App</p>
+        <p class="font-medium text-base leading-5">
+          Save $3 with App New User Only
+        </p>
+        <!-- playstore and appstore -->
+
+        <div class="grid grid-rows-3 grid-flow-col">
+          <div class="row-span-3 ... cursor-pointer">
+            <img src="/images/Qrcode 1.png" alt="" />
+          </div>
+          <div class="col-span-2 ... cursor-pointer">
+            <img src="/images/google_play.png" alt="" />
+          </div>
+          <div class="col-span-2 ... cursor-pointer">
+            <img src="/images/download-appstore.png" alt="" />
+          </div>
+        </div>
+        <!-- playstore and appstore -->
+        <!-- Social links -->
+        <div class="flex justify-content space-x-8" id="social">
+          <img src="/images/fb.png" alt="" class="cursor-pointer" />
+          <img src="/images/tweet.png" alt="" class="cursor-pointer" />
+          <img src="/images/icon-instagram.png" alt="" class="cursor-pointer" />
+          <img src="/images/Icon-Linkedin.png" alt="" class="cursor-pointer" />
+        </div>
+        <!-- Social links -->
+      </div>
+    </div>
+    <!-- Copyright -->
+    <div class="text-center bg-black">
+      <p style="color: rgba(160, 163, 189, 1)">
+        &copy Copyright Rimel 2022. All right reserved
+      </p>
+    </div>
+    <script src="CheckOut.js"></script>
+  </body>
+</html>

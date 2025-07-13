@@ -1,308 +1,497 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About SavyCal-Ecommerce Website</title>
-    <link rel="stylesheet" href="AboutStyle.css">
-    <link rel="icon" href="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" type="image/icon type">
+    <link rel="stylesheet" href="AboutStyle.css" />
+    <link
+      rel="icon"
+      href="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
+      type="image/icon type"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <div class="bg-black text-white " >
-        <div class="text-center xl:space-x-48 p-2 ">
-          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!   
-          <span  class="underline ... font-semibold ">ShopNow</span>
-          <select id="language" class="bg-black text-white">
-              <option selected>English</option>
-              <option value="UR">Urdu</option>
-              <option value="FR">French</option>
-              <option value="TU">Turkish</option>
-            </select>
-        </div> 
-  </div> 
-  <!-- navbar -->
+  </head>
+  <body>
+    <div class="bg-black text-white">
+      <div class="text-center xl:space-x-48 p-2">
+        Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+        <span class="underline ... font-semibold">ShopNow</span>
+        <select id="language" class="bg-black text-white">
+          <option selected>English</option>
+          <option value="UR">Urdu</option>
+          <option value="FR">French</option>
+          <option value="TU">Turkish</option>
+        </select>
+      </div>
+    </div>
+    <!-- navbar -->
 
-       <!-- Hamburger -->
-       <div class="grid grid-cols-3 gap-4 mt-5" >
-        <div class="lg:hidden" id="Hamburger">
-            <button id="mobile-menu-button" class=" hover:text-black-900 focus:outline-none">
-              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-              </svg>
-            </button>
-          </div>
-        <!-- Logo -->
-        <div>
-            <img src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48" class="mr-5">
-        </div>
-          <!-- links -->
-        <div class="hidden lg:flex justify-center space-x-10 mt-2">
-            <a href="HomePage.html" class="text-black-900  hover:underline">Home</a>
-            <a href="Contact.html" class="text-black-900 hover:underline">Contact</a>
-            <a href="About.html" class="text-black-900 hover:underline">About</a>
-            <a href="index.html" class="text-black-900 hover:underline">SignUp</a>
+    <!-- Hamburger -->
+    <header
+      class="w-full bg-white shadow-md flex items-center justify-between flex-wrap"
+    >
+      <!-- Logo -->
+      <div class="flex items-center flex-shrink-0">
+        <img
+          src="https://cdn.dribbble.com/userupload/17039933/file/original-dbbc84c08bd6b4b49fc97827fa5be468.jpg?resize=1504x1128&vertical=center"
+          alt="SavvyCal"
+          class="w-24 mr-4"
+        />
+      </div>
 
+      <!-- Hamburger Button (Mobile) -->
+      <div class="block lg:hidden">
+        <button
+          id="mobile-menu-button"
+          class="text-black hover:text-gray-800 focus:outline-none"
+        >
+          <svg
+            class="h-8 w-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Nav Links (Desktop) -->
+      <nav
+        class="hidden w-full lg:flex lg:items-center lg:w-auto space-x-6 mt-4 lg:mt-0"
+      >
+        <a href="/HomePage.html" class="text-black hover:underline">Home</a>
+        <a href="/Contact.html" class="text-black hover:underline">Contact</a>
+        <a href="/About.html" class="text-black hover:underline">About</a>
+        <a href="Signup.html" class="text-black hover:underline">SignUp</a>
+      </nav>
+
+      <!-- Search + Icons -->
+      <div
+        class="relative hidden lg:flex items-center space-x-4 ml-auto mt-4 lg:mt-0"
+      >
+        <input
+          type="text"
+          placeholder="Looking for?"
+          class="p-2 border rounded-lg shadow-sm focus:outline-none w-64"
+        />
+        <img src="/images/search_icon.png" alt="Search" class="w-6 h-6" />
+        <img src="/images/like.png" alt="Like" class="w-6 h-6" />
+        <a href="/AddToCart.html"
+          ><img src="/images/Cart1.png" alt="Cart" class="w-6 h-6"
+        /></a>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="lg:hidden hidden flex flex-col space-y-4 p-4 bg-white shadow-md absolute top-20 left-0 w-full z-50"
+    >
+      <!-- Close Button -->
+      <div class="flex justify-end">
+        <button
+          id="mobile-menu-close"
+          class="text-gray-600 hover:text-black text-2xl font-bold focus:outline-none"
+        >
+          &times;
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <a href="/HomePage.html" class="text-black hover:underline">Home</a>
+      <a href="/Contact.html" class="text-black hover:underline">Contact</a>
+      <a href="/About.html" class="text-black hover:underline">About</a>
+      <a href="Signup.html" class="text-black hover:underline">SignUp</a>
+
+      <!-- Search and Icons -->
+      <div class="relative mt-4">
+        <input
+          type="text"
+          placeholder="Looking for?"
+          class="w-full p-2 border rounded-lg shadow-sm focus:outline-none"
+        />
+        <img
+          src="/images/search_icon.png"
+          alt="Search"
+          class="absolute top-3 right-24 w-5 h-5"
+        />
+        <img
+          src="/images/like.png"
+          alt="Like"
+          class="absolute top-3 right-14 w-5 h-5"
+        />
+        <a href="/AddToCart.html" class="absolute top-3 right-4">
+          <img src="/images/Cart1.png" alt="Cart" class="w-6 h-6" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Our Story -->
+    <div
+      class="sm:grid grid-cols-1 mt-20 md:grid grid-cols-2 mt-20 lg:grid grid-cols-2 mt-20 xl:grid grid-cols-2 mt-20"
+    >
+      <div class="sm:ml-0 md:ml-5 lg:ml-5 2xl:mt-20">
+        <p class="font-semibold text-5xl leading-10">Our Story</p>
+        <p class="font-normal text-base leading-6 max-w-md mt-10">
+          Launced in 2015, Exclusive is South Asia’s premier online shopping
+          makterplace with an active presense in Bangladesh. Supported by wide
+          range of tailored marketing, data and service solutions, Exclusive has
+          10,500 sallers and 300 brands and serves 3 millioons customers across
+          the region.
+        </p>
+        <p class="font-normal text-base leading-6 max-w-md mt-5">
+          Exclusive has more than 1 Million products to offer, growing at a very
+          fast. Exclusive offers a diverse assotment in categories ranging from
+          consumer.
+        </p>
+      </div>
+      <div>
+        <img src="/images/two-african-females.png" alt="" />
+      </div>
+    </div>
+    <!-- Our Story -->
+
+    <!-- Security -->
+    <div
+      class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-8 mt-20"
+    >
+      <!-- First Child -->
+      <div
+        class="flex items-center flex-col border border-slate-300 max-w-56 p-5 rounded-sm hover:bg-red-500 hover:text-white xl:ml-20"
+      >
+        <div
+          class="border-8 border-black w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center"
+        >
+          <img src="/images/Icon-Shop.png" alt="" />
         </div>
-          <!-- Search Shop Buy -->
-        <div class="relative pl-10" id="links-hide">
-            <!-- search -->
-              <input type="text" name="" id="" placeholder="looking for?"
-              class="p-2 "
-              >
-              <img src="/images/search_icon.png" alt="" class="absolute top-3 left-52">
-              <img src="/images/like.png" alt="" class="absolute top-3 left-64" >
-             <a href="AddToCart.html"> <img src="/images/Cart1.png" alt="" class="absolute top-2 left-72">
-             </a>
-            <!-- search -->
-            
+
+        <div class="mt-2 text-center">
+          <p class="font-bold text-4xl leading-7">10.5k</p>
+          <p class="font-normal text-base leading-5 mt-2">
+            Sallers active our site
+          </p>
         </div>
       </div>
 
+      <!-- Second Child -->
+      <div
+        class="flex items-center flex-col border border-slate-300 max-w-56 p-5 rounded-sm hover:bg-red-500 hover:text-white xl:ml-10"
+      >
+        <div
+          class="border-8 border-black w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center"
+        >
+          <img src="/images/Icon-Sale.png" alt="" />
+        </div>
 
-       <!-- Mobile Menu -->
-       <div class="Mobile fixed text-white bg-gray-700 bg-opacity-50">
-        <a href="HomePage.html" class="text-black-900 hover:underline">Home</a>
-        <a href="Contact.html" class="text-black-900 hover:underline">Contact</a>
-        <a href="About.html" class="text-black-900 hover:underline">About</a>
-        <a href="index.html" class="text-black-900 hover:underline">SignUp</a>
-        <div class="relative">
-            <!-- search -->
-              <input type="text" name="" id="" placeholder="looking for?"
-              class="p-2"
-              >
-              <img src="/images/search_icon.png" alt="" class="absolute top-3 left-40">
-              <img src="/images/like.png" alt="" class="absolute top-3 left-48" >
-             <a href="AddToCart.html"> <img src="/images/Cart1.png" alt="" class="absolute top-2 left-56">
-             </a>
-            <!-- search -->
-        </div>
-       </div>
-    <!-- Our Story -->
-    <div class="sm:grid grid-cols-1 mt-20 md:grid grid-cols-2 mt-20 lg:grid grid-cols-2 mt-20 xl:grid grid-cols-2 mt-20">
-       <div class="sm:ml-0 md:ml-5 lg:ml-5 2xl:mt-20">
-        <p class="font-semibold text-5xl leading-10">Our Story</p>
-        <p class="font-normal text-base leading-6 max-w-md mt-10">Launced in 2015, Exclusive is South Asia’s premier online shopping makterplace with an active presense in Bangladesh. Supported by wide range of tailored marketing, data and service solutions, Exclusive has 10,500 sallers and 300 brands and serves 3 millioons customers across the region.</p>
-        <p class="font-normal text-base leading-6 max-w-md mt-5">Exclusive has more than 1 Million products to offer, growing at a very fast. Exclusive offers a diverse assotment in categories ranging  from consumer.</p>
-       </div>
-       <div>
-        <img src="/images/two-african-females.png" alt="" >
-       </div>
-    </div>
-    <!-- Our Story -->
-
-      <!-- Security -->
-   <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-8 mt-20">
-    <!-- First Child -->
-    <div class="flex items-center flex-col border border-slate-300 max-w-56 p-5 rounded-sm hover:bg-red-500 hover:text-white xl:ml-20">
-        <div class="border-8 border-black w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center">
-            <img src="/images/Icon-Shop.png" alt="">
-        </div>
-        
-        <div class="mt-2 text-center">
-            <p class="font-bold text-4xl leading-7">10.5k</p>
-            <p class="font-normal text-base leading-5 mt-2">Sallers active our site</p>
-        </div>
-    </div>
-
-    <!-- Second Child -->
-    <div class="flex items-center flex-col border border-slate-300 max-w-56 p-5 rounded-sm hover:bg-red-500 hover:text-white xl:ml-10">
-        <div class="border-8 border-black w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center">
-          <img src="/images/Icon-Sale.png" alt="">
-        </div>
-        
         <div class="mt-2 text-center">
           <p class="font-bold text-4xl leading-7">33k</p>
-          <p class="font-normal text-base leading-5 mt-2">Mopnthly Produduct Sale</p>
+          <p class="font-normal text-base leading-5 mt-2">
+            Mopnthly Produduct Sale
+          </p>
         </div>
-    </div>
+      </div>
 
-    <!-- Third Child -->
-    <div class="flex items-center flex-col border border-slate-300 max-w-56 p-5 rounded-sm hover:bg-red-500 hover:text-white xl:ml-4">
-        <div class="border-8 border-black w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center">
-          <img src="/images/bag.png" alt="">
+      <!-- Third Child -->
+      <div
+        class="flex items-center flex-col border border-slate-300 max-w-56 p-5 rounded-sm hover:bg-red-500 hover:text-white xl:ml-4"
+      >
+        <div
+          class="border-8 border-black w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center"
+        >
+          <img src="/images/bag.png" alt="" />
         </div>
-        
+
         <div class="mt-2 text-center">
           <p class="font-bold text-4xl leading-7">45.5k</p>
-          <p class="font-normal text-base leading-5 mt-2">Customer active in our site</p>
+          <p class="font-normal text-base leading-5 mt-2">
+            Customer active in our site
+          </p>
         </div>
-    </div>
-    <!-- Fourth Child -->
-    <div class="flex items-center flex-col border border-slate-300 max-w-56 p-5 rounded-sm hover:bg-red-500 hover:text-white">
-        <div class="border-8 border-black w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center">
-          <img src="/images/Icon-Moneybag.png" alt="">
+      </div>
+      <!-- Fourth Child -->
+      <div
+        class="flex items-center flex-col border border-slate-300 max-w-56 p-5 rounded-sm hover:bg-red-500 hover:text-white"
+      >
+        <div
+          class="border-8 border-black w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center"
+        >
+          <img src="/images/Icon-Moneybag.png" alt="" />
         </div>
-        
+
         <div class="mt-2 text-center">
           <p class="font-bold text-4xl leading-7">25k</p>
-          <p class="font-normal text-base leading-5 mt-2">Anual gross sale in our site</p>
+          <p class="font-normal text-base leading-5 mt-2">
+            Anual gross sale in our site
+          </p>
         </div>
+      </div>
     </div>
-</div>
-  <!-- Founders -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-10 mt-20 xl:ml-64">
-    <!-- First Child -->
-    <div>
+    <!-- Founders -->
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-10 mt-20 xl:ml-64"
+    >
+      <!-- First Child -->
+      <div>
         <div class="border border-slate-200 rounded-sm bg-slate-100">
-            <img src="/images/boy.png" alt="" class="h-96">
+          <img src="/images/boy.png" alt="" class="h-96" />
         </div>
         <div class="mt-2">
-            <p class="font-medium text-3xl leading-7">Tom Cruise</p>
-            <p class="font-normal text-base leading-5 mt-2">Founder & Chairman</p>
+          <p class="font-medium text-3xl leading-7">Tom Cruise</p>
+          <p class="font-normal text-base leading-5 mt-2">Founder & Chairman</p>
         </div>
         <div class="flex justify-content space-x-3 mt-3" id="social">
-          <img src="/images/Tweer2.png" alt="" class="cursor-pointer">
-          <img src="/images/logo-instagram-png-13560.png" alt="" class="w-5 cursor-pointer">
-         </div>
-        
-    </div>
-
-    <!-- Second Child -->
-    <div>
-      <div class="border border-slate-200 rounded-sm bg-slate-100">
-          <img src="/images/girl.png" alt="" class="h-96">
+          <img src="/images/Tweer2.png" alt="" class="cursor-pointer" />
+          <img
+            src="/images/logo-instagram-png-13560.png"
+            alt=""
+            class="w-5 cursor-pointer"
+          />
+        </div>
       </div>
-      <div class="">
+
+      <!-- Second Child -->
+      <div>
+        <div class="border border-slate-200 rounded-sm bg-slate-100">
+          <img src="/images/girl.png" alt="" class="h-96" />
+        </div>
+        <div class="">
           <p class="font-medium text-3xl leading-7">Emma Watson</p>
           <p class="font-normal text-base leading-5 mt-2">Managing Director</p>
-            
+        </div>
+        <div class="flex justify-content space-x-3 mt-3" id="social">
+          <img src="/images/Tweer2.png" alt="" class="cursor-pointer" />
+          <img
+            src="/images/logo-instagram-png-13560.png"
+            alt=""
+            class="w-5 cursor-pointer"
+          />
+        </div>
       </div>
-      <div class="flex justify-content space-x-3 mt-3" id="social">
-        <img src="/images/Tweer2.png" alt="" class="cursor-pointer">
-        <img src="/images/logo-instagram-png-13560.png" alt="" class="w-5 cursor-pointer">
-       </div>
-      
-  </div>
-    <!-- Third Child -->
-    <div>
-      <div class="border border-slate-200 rounded-sm bg-slate-100">
-          <img src="/images/man.png" alt="" class="h-96">
-      </div>
-      <div class="mt-2">
+      <!-- Third Child -->
+      <div>
+        <div class="border border-slate-200 rounded-sm bg-slate-100">
+          <img src="/images/man.png" alt="" class="h-96" />
+        </div>
+        <div class="mt-2">
           <p class="font-medium text-3xl leading-7">Will Smith</p>
           <p class="font-normal text-base leading-5 mt-2">Product Designer</p>
-            
+        </div>
+        <div class="flex justify-content space-x-3 mt-3" id="social">
+          <img src="/images/Tweer2.png" alt="" class="cursor-pointer" />
+          <img
+            src="/images/logo-instagram-png-13560.png"
+            alt=""
+            class="w-5 cursor-pointer"
+          />
+        </div>
       </div>
-      <div class="flex justify-content space-x-3 mt-3" id="social">
-        <img src="/images/Tweer2.png" alt="" class="cursor-pointer">
-        <img src="/images/logo-instagram-png-13560.png" alt="" class="w-5 cursor-pointer">
-       </div>
-      
-  </div>
-</div>
-  <!-- Founders -->
-
-  <!-- New Arrival -->
-   <!-- Security -->
-   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 mt-20">
-    <!-- First Child -->
-    <div class="flex items-center flex-col">
-        <div class="border-8 border-black w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center">
-            <img src="/images/icon-delivery.png" alt="">
-        </div>
-        
-        <div class="mt-2">
-            <p class="font-semibold text-xl leading-7">FREE AND FAST DELIVERY</p>
-            <p class="font-normal text-base leading-5">Free delivery for all orders over $140</p>
-        </div>
     </div>
+    <!-- Founders -->
 
-    <!-- Second Child -->
-    <div class="flex items-center flex-col">
-        <div class="border-8 border-black w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center">
-          <img src="/images/Mic_con.png" alt="">
+    <!-- New Arrival -->
+    <!-- Security -->
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 mt-20"
+    >
+      <!-- First Child -->
+      <div class="flex items-center flex-col">
+        <div
+          class="border-8 border-black w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center"
+        >
+          <img src="/images/icon-delivery.png" alt="" />
         </div>
-        
+
+        <div class="mt-2">
+          <p class="font-semibold text-xl leading-7">FREE AND FAST DELIVERY</p>
+          <p class="font-normal text-base leading-5">
+            Free delivery for all orders over $140
+          </p>
+        </div>
+      </div>
+
+      <!-- Second Child -->
+      <div class="flex items-center flex-col">
+        <div
+          class="border-8 border-black w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center"
+        >
+          <img src="/images/Mic_con.png" alt="" />
+        </div>
+
         <div class="mt-2">
           <p class="font-semibold text-xl leading-7">24/7 CUSTOMER SERVICE</p>
-          <p class="font-normal text-base leading-5">Friendly 24/7 customer support</p>
+          <p class="font-normal text-base leading-5">
+            Friendly 24/7 customer support
+          </p>
         </div>
-    </div>
-
-    <!-- Third Child -->
-    <div class="flex items-center flex-col">
-        <div class="border-8 border-black w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center">
-          <img src="/images/Icon-secure.png" alt="">
-        </div>
-        
-        <div class="mt-2">
-          <p class="font-semibold text-xl leading-7">MONEY BACK GUARANTEE</p>
-          <p class="font-normal text-base leading-5">We reurn money within 30 days</p>
-        </div>
-    </div>
-</div>
-
-     <!-- footer -->
-     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-20 bg-black text-white">
-      <!-- Your content goes here -->
-      <div class="p-5 relative w-4/5 m-auto space-y-5 ">
-        <p class="font-bold text-2xl leading-6">Exclusive</p>
-        <p class="font-medium text-xl leading-7 hover:underline cursor-pointer">Subscribe</p>
-        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Get 10% off your first order</p>
-        <input
-        type="email"
-        id="email"
-        name="email"
-        class=" bg-black  mt-1 p-2 border border-gray-300 rounded-sm "
-        placeholder="Enter your email"
-        />
-        <img src="/images/icon-send.png" alt="" id="send-icon" class="text-white">
-
       </div>
 
+      <!-- Third Child -->
+      <div class="flex items-center flex-col">
+        <div
+          class="border-8 border-black w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center"
+        >
+          <img src="/images/Icon-secure.png" alt="" />
+        </div>
+
+        <div class="mt-2">
+          <p class="font-semibold text-xl leading-7">MONEY BACK GUARANTEE</p>
+          <p class="font-normal text-base leading-5">
+            We reurn money within 30 days
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-20 bg-black text-white"
+    >
+      <!-- Your content goes here -->
+      <div class="p-5 relative w-4/5 m-auto space-y-5">
+        <p class="font-bold text-2xl leading-6">Exclusive</p>
+        <p class="font-medium text-xl leading-7 hover:underline cursor-pointer">
+          Subscribe
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          Get 10% off your first order
+        </p>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="bg-black mt-1 p-2 border border-gray-300 rounded-sm"
+          placeholder="Enter your email"
+        />
+        <img
+          src="/images/icon-send.png"
+          alt=""
+          id="send-icon"
+          class="text-white"
+        />
+      </div>
 
       <!-- Your content goes here -->
       <div class="p-5 space-y-5">
         <p class="font-medium text-xl leading-7">Support</p>
-        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">111 Bijoy sarani, Dhaka</p>
-        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">DH 1515, Bangladesh.</p>
-        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">exclusive@gmail.com</p>
-        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">+88015-88888-9999</p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          111 Bijoy sarani, Dhaka
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          DH 1515, Bangladesh.
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          exclusive@gmail.com
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          +88015-88888-9999
+        </p>
       </div>
       <!-- Your content goes here -->
       <div class="p-5 space-y-5">
         <p class="font-medium text-xl leading-7">Account</p>
-        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">My Account</p>
-        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Login / Register</p>
-        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Cart</p>
-        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Wishlist</p>
-        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Shop</p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          My Account
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          Login / Register
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          Cart
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          Wishlist
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          Shop
+        </p>
       </div>
       <!-- Your content goes here -->
       <div class="p-5 space-y-5">
         <p class="font-medium text-xl leading-7">Quick Link</p>
-        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Privacy Policy</p>
-        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Terms Of Use</p>
-        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">FAQ</p>
-        <p class="font-normal text-base leading-6 hover:underline cursor-pointer">Contact</p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          Privacy Policy
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          Terms Of Use
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          FAQ
+        </p>
+        <p
+          class="font-normal text-base leading-6 hover:underline cursor-pointer"
+        >
+          Contact
+        </p>
       </div>
       <!-- Your content goes here -->
       <div class="p-5 space-y-5">
         <p class="font-medium text-xl leading-7">Download App</p>
-        <p class="font-medium text-base leading-5">Save $3 with App New User Only</p>
+        <p class="font-medium text-base leading-5">
+          Save $3 with App New User Only
+        </p>
         <!-- playstore and appstore -->
 
         <div class="grid grid-rows-3 grid-flow-col">
-          <div class="row-span-3 ... cursor-pointer"><img src="/images/Qrcode 1.png" alt=""></div>
-          <div class="col-span-2 ... cursor-pointer"><img src="/images/google_play.png" alt=""></div>
-          <div class="col-span-2 ... cursor-pointer"><img src="/images/download-appstore.png" alt=""></div>
+          <div class="row-span-3 ... cursor-pointer">
+            <img src="/images/Qrcode 1.png" alt="" />
+          </div>
+          <div class="col-span-2 ... cursor-pointer">
+            <img src="/images/google_play.png" alt="" />
+          </div>
+          <div class="col-span-2 ... cursor-pointer">
+            <img src="/images/download-appstore.png" alt="" />
+          </div>
         </div>
         <!-- playstore and appstore -->
-         <!-- Social links -->
-         <div class="flex justify-content   space-x-8" id="social">
-          <img src="/images/fb.png" alt=""  class="cursor-pointer">
-          <img src="/images/tweet.png" alt="" class="cursor-pointer">
-          <img src="/images/icon-instagram.png" alt="" class="cursor-pointer">
-          <img src="/images/Icon-Linkedin.png" alt="" class="cursor-pointer">
-         </div>
-         <!-- Social links -->
-
+        <!-- Social links -->
+        <div class="flex justify-content space-x-8" id="social">
+          <img src="/images/fb.png" alt="" class="cursor-pointer" />
+          <img src="/images/tweet.png" alt="" class="cursor-pointer" />
+          <img src="/images/icon-instagram.png" alt="" class="cursor-pointer" />
+          <img src="/images/Icon-Linkedin.png" alt="" class="cursor-pointer" />
+        </div>
+        <!-- Social links -->
       </div>
     </div>
     <!-- Copyright -->
-     <div class="text-center bg-black">
-        <p style="color: rgba(160, 163, 189, 1);">&copy Copyright Rimel 2022. All right reserved</p>
-     </div>
-<script src="About.js"></script>
-</body>
+    <div class="text-center bg-black">
+      <p style="color: rgba(160, 163, 189, 1)">
+        &copy Copyright Rimel 2022. All right reserved
+      </p>
+    </div>
+    <script src="About.js"></script>
+  </body>
 </html>

@@ -26,60 +26,66 @@
  <!-- navbar -->
 
  <!-- Hamburger -->
- <div class="grid grid-cols-3 gap-4 mt-5" >
-  <div class="lg:hidden" id="Hamburger">
-      <button id="mobile-menu-button" class=" hover:text-black-900 focus:outline-none">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
-    </div>
+ <header class="w-full bg-white shadow-md  flex items-center justify-between flex-wrap">
   <!-- Logo -->
-  <div>
-      <img src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48" class="mr-5">
+  <div class="flex items-center flex-shrink-0">
+    <img src="https://cdn.dribbble.com/userupload/17039933/file/original-dbbc84c08bd6b4b49fc97827fa5be468.jpg?resize=1504x1128&vertical=center" alt="SavvyCal" class="w-24 mr-4">
   </div>
-    <!-- links -->
-  <div class="hidden lg:flex justify-center space-x-10 mt-2">
-      <a href="#" class="text-black-900  hover:underline">Home</a>
-      <a href="#" class="text-black-900 hover:underline">Contact</a>
-      <a href="#" class="text-black-900 hover:underline">About</a>
-      <a href="Signup.html" class="text-black-900 hover:underline">SignUp</a>
 
+  <!-- Hamburger Button (Mobile) -->
+  <div class="block lg:hidden">
+    <button id="mobile-menu-button" class="text-black hover:text-gray-800 focus:outline-none">
+      <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
   </div>
-    <!-- Search Shop Buy -->
-  <div class="relative pl-10" id="links-hide">
-      <!-- search -->
-        <input type="text" name="" id="" placeholder="looking for?"
-        class="p-2 "
-        >
-        <img src="/images/search_icon.png" alt="" class="absolute top-3 left-52">
-        <img src="/images/like.png" alt="" class="absolute top-3 left-64" >
-        <img src="/images/Cart1.png" alt="" class="absolute top-2 left-72">
-        
-      <!-- search -->
-      
+
+  <!-- Nav Links (Desktop) -->
+  <nav class="hidden w-full lg:flex lg:items-center lg:w-auto space-x-6 mt-4 lg:mt-0">
+    <a href="#" class="text-black hover:underline">Home</a>
+    <a href="#" class="text-black hover:underline">Contact</a>
+    <a href="#" class="text-black hover:underline">About</a>
+    <a href="Signup.html" class="text-black hover:underline">SignUp</a>
+  </nav>
+
+  <!-- Search + Icons -->
+  <div class="relative hidden lg:flex items-center space-x-4 ml-auto mt-4 lg:mt-0">
+    <input type="text" placeholder="Looking for?" class="p-2 border rounded-lg shadow-sm focus:outline-none w-64">
+    <img src="/images/search_icon.png" alt="Search" class="w-6 h-6">
+    <img src="/images/like.png" alt="Like" class="w-6 h-6">
+    <img src="/images/Cart1.png" alt="Cart" class="w-6 h-6">
+  </div>
+</header>
+
+
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="lg:hidden hidden flex flex-col space-y-4 p-4 bg-white shadow-md absolute top-20 left-0 w-full z-50">
+  <!-- Close Button -->
+  <div class="flex justify-end">
+    <button id="mobile-menu-close" class="text-gray-600 hover:text-black text-2xl font-bold focus:outline-none">
+      &times;
+    </button>
+  </div>
+
+  <!-- Navigation Links -->
+  <a href="#" class="text-black hover:underline">Home</a>
+  <a href="#" class="text-black hover:underline">Contact</a>
+  <a href="#" class="text-black hover:underline">About</a>
+  <a href="Signup.html" class="text-black hover:underline">SignUp</a>
+
+  <!-- Search and Icons -->
+  <div class="relative mt-4">
+    <input type="text" placeholder="Looking for?" class="w-full p-2 border rounded-lg shadow-sm focus:outline-none">
+    <img src="/images/search_icon.png" alt="Search" class="absolute top-3 right-24 w-5 h-5">
+    <img src="/images/like.png" alt="Like" class="absolute top-3 right-14 w-5 h-5">
+    <img src="/images/Cart1.png" alt="Cart" class="absolute top-3 right-4 w-5 h-5">
   </div>
 </div>
 
 
- <!-- Mobile Menu -->
- <div class="Mobile fixed text-white bg-gray-700 bg-opacity-50">
-  <a href="#" class="text-black-900 hover:underline">Home</a>
-  <a href="#" class="text-black-900 hover:underline">Contact</a>
-  <a href="#" class="text-black-900 hover:underline">About</a>
-  <a href="Signup.html" class="text-black-900 hover:underline">SignUp</a>
-  <div class="relative">
-      <!-- search -->
-        <input type="text" name="" id="" placeholder="looking for?"
-        class="p-2"
-        >
-        <img src="/images/search_icon.png" alt="" class="absolute top-3 left-40">
-        <img src="/images/like.png" alt="" class="absolute top-3 left-48" >
-        <img src="/images/Cart1.png" alt="" class="absolute top-2 left-56">
-        
-      <!-- search -->
-  </div>
- </div>
 
       <!-- Forms -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 mt-5">
@@ -197,9 +203,3 @@
     <script src="SignUpLogic.js"></script>
 </body>
 </html>
-
-
-
-
-
-<!-- text-center inline-flex items-center -->
